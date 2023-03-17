@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="SetReminder.js"></script> 
+
+
+  
+  <style>
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  label {
+    /* display: block; */
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type=date],
+  input[type=email],
+  input[type=number] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .container .submit{
+    background-color: #04AA6D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 13px 16px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .container .submit a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  h2{
+    text-align: center;
+    background-color: #04AA6D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0px;
+    cursor: pointer;
+  }
+
+  #subject{
+    /* background-color: #04AA6D; */
+    /* color: #fff; */
+    border: 2px solid #04AA6D ;
+    border-radius: 5px;
+    padding: 10px 110px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  textarea{
+    border: 2px solid #04AA6D ;
+    border-radius: 5px;
+    padding:40px 20px;
+    cursor: pointer;
+    /* width: 100%; */
+    margin-top: 10px;
+    margin-right: 42px;
+  }
+
+  </style>
+</head>
+<body>
+    <div class="container">
+      <form>
+        <h2>Set Reminder</h2>
+        <div>
+        <label for="reminder-date">Select a Date:</label>
+        <input type="date" id="reminder-date">
+      </div>
+
+      <div>
+        <label for="subject">Event: </label>
+        <input type="text" placeholder="Add Event" id="reminder-subject" required>
+        <!-- <select id="reminder-subject">
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+          <option value="nodejs">NodeJS</option>
+          <option value="bootstrap">Bootstrap</option>
+          <option value="jquery">JQuery</option>
+  
+        </select> -->
+      </div>
+      <br>
+
+      <label for="reminder-message">Add description:</label>
+      <input type="text" placeholder="Add description" id="reminder-message" required>
+      <br>    
+ <hr>    
+    <label for="email">Email:</label>
+    <input type="email" id="reminder-email">
+<hr>
+    <label for="number">Phone Number:</label>
+    <input type="number" id="reminder-number">
+
+    <button class ="submit" onclick="saveReminder()">Set Reminder</button>
+    <button class ="submit" id="displayrem" onclick="displayReminders()"><a href="Reminder.html">View Reminder</a></button>
+    <button class ="submit" onclick="displayReminders()"><a href="Reminder.html"> Cancel Reminder</a></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+  
+</script>
+ 
+
+  
+</body>
+</html>

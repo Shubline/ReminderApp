@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Reminders Application</title>
+
+  <link rel="stylesheet" href="event.css">
+  <link rel="stylesheet" href="Reminder.css">
+  <script type="text/javascript" src="event.js" async defer></script>
+  <script type="text/javascript" src="SetReminder.js" async defer></script>
+  
+</head>
+
+<body>
+
+    <div class="container">
+
+      <div class="header">
+        <h1>Welcome to the Reminders Application</h1>
+        <!-- <p>Today is Tuesday, 14th of February.</p> -->
+      </div>
+
+      <div class="main">
+        <h1>Reminders</h1>
+        
+        <!-- <iframe src="setReminder.html"></iframe> -->
+
+        
+
+        <div class=" ">
+          <ul id="reminder-list"></ul>
+          <ul class="list">
+            <!-- Enter a list of reminder -->
+          </ul>
+        </div>
+      
+
+      </div>
+
+      <div class="content">
+
+        <div class="options">
+          <div class="option" onclick="setReminder()">Set Reminder</div>
+          <!-- <button class="option" id="newReminder">Set Reminder</button> -->
+          <!-- <div class="option" onclick="modifyReminder()">Modify Reminder</div>
+          <div class="option" onclick="disableReminder()">Disable Reminder</div> -->
+          <div class="option" onclick="deleteReminder()">Delete Reminder</div>
+        <!-- <div class="option" onclick="enableReminder()">Enable Reminder</div>
+          <div class="option" onclick="viewReminders()">View Your Reminders</div> -->
+          <div class="option" onclick="logout()">Log Out</div>
+        </div>
+      </div>
+     
+    </div>
+
+
+    <script>
+      // JavaScript code for reminders options
+      function setReminder() {
+        window.location.href ='SetReminder.html';
+      }
+      function modifyReminder() {
+        alert('Reminder modified!');
+      }
+      function disableReminder() {
+        alert('Reminder disabled!');
+      }
+      function deleteReminder() {
+        // alert('Reminder deleted!');
+        localStorage.clear();
+        sessionStorage.clear();
+        window.location.reload();
+      }
+      function enableReminder() {
+        alert('Reminder enabled!');
+      }
+      function viewReminders() {
+        window.location.href = 'reminders.html';
+      }
+      function logout() {
+        window.location.href ='logoutPage.html';
+      }
+    </script>
+
+</body>
+</html>
+
+
+

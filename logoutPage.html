@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Logout Page</title>
+    <style>
+      /* CSS styles for formatting */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      form {
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 400px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+      h2 {
+        margin-top: 0;
+      }
+      input[type="submit"] {
+        background-color: #04AA6D;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <h2>Are you sure you want to log out?</h2>
+        <input type="submit" value="Log Out">
+      </form>
+    </div>
+
+
+    <script>
+      // JavaScript code to handle form submission
+      var form = document.querySelector('form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        // clear any session or local storage data
+        // localStorage.clear();
+        // sessionStorage.clear();
+        // redirect to login page
+        window.location.href = 'login.html';
+      });
+    </script>
+
+
+  </body>
+</html>
